@@ -232,7 +232,7 @@ function getSumMultiplesInt (arr, callback, index, res) {
 
 
 // t10
-function amountNumericTypes(arr) {
+function amountTypesInt(arr) {
   if (!(arr instanceof Array)) {
     throw new Error ('Enter the array');
   }
@@ -291,7 +291,7 @@ function amountNumericTypes (arr, index, lists, couterForPrime ,couterForPositiv
         return lists;
       }
 
-  return amountNumericTypes (arr, ++index, lists, couterForPrime ,couterForPositive, couterForZero, couterForNegative);
+  return amountTypesInt (arr, ++index, lists, couterForPrime ,couterForPositive, couterForZero, couterForNegative);
 }
 
 // t11
@@ -338,35 +338,6 @@ function getSumMultiplesInt(arr, callback) {
    }
   }
   return res;
-}
-
-function amountNumericTypes(arr) {
-  if (!(arr instanceof Array)) {
-    throw new Error ('Enter the array');
-  }
-  let couterForPrime = 0;
-  let couterForPositive = 0;
-  let couterForZero = 0;
-  let couterForNegative = 0;
-    for (let int of arr) {
-      if (!(int % int - 2 === 0)) {
-        couterForPrime++;
-      }      if (int > 0) {
-        couterForPositive++;
-      }      if (int === 0) {
-        couterForZero++;
-      }      if(int < 0){
-        couterForNegative++;
-      }
-    }
-    const lists = [
-        `Negative: ${couterForNegative}`,
-        `Positive: ${couterForPositive}`,
-        `Zero: ${couterForZero}`,
-        `Prime: ${couterForNegative}`
-      ]
-
-  return lists;
 }
 
 // t13
