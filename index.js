@@ -3,7 +3,7 @@ String.prototype.myHawking = function(separator) {
   let text = '';
   if (separator === '') {
     for (let i = 0; i < this.length; i ++) {
-      arr.push(this[i])
+      arr.push(this[i]);
     }
   }
 
