@@ -636,6 +636,10 @@ function isNegsitive(num) {
 }
 
 function amountBits(num) {
+  if (!(num instanceof Number)) {
+    throw new Error('Enter the number')
+  }
+  
   let counter = 0;
   const bit = {
     zero: null,
@@ -653,16 +657,24 @@ function amountBits(num) {
 }
 
 function tilda(number) {
-    let result = 0;
-    for (let i = 0; i < 32; i++){
-        if (((number >> i) & 1) === 0) {
-            result = result | (1<<i);
-        }
-    }
-    return result
+  if (!(num instanceof Number)) {
+    throw new Error('Enter the number')
+  }
+
+  let result = 0;
+  for (let i = 0; i < 32; i++){
+      if (((number >> i) & 1) === 0) {
+          result = result | (1<<i);
+      }
+  }
+  return result
 }
 
 function tildaSecondForm(num) {
+  if (!(num instanceof Number)) {
+    throw new Error('Enter the number')
+  }
+
   let result = 0;
 
   for (let i = 0; i < 32; i++) {
