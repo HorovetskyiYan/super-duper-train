@@ -632,6 +632,10 @@ let generator = generateSequence();
 
 // t20
 function isNegsitive(num) {
+  if (!(num instanceof Number)) {
+    throw new Error('Enter the number')
+  }
+  
   return (!(num >> 31 === 0))
 }
 
@@ -639,7 +643,7 @@ function amountBits(num) {
   if (!(num instanceof Number)) {
     throw new Error('Enter the number')
   }
-  
+
   let counter = 0;
   const bit = {
     zero: null,
